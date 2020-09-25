@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-table v-loading="loading" :data="availableLocations" style="width: 100%" max-height="700" @row-click="handleLocationClick">
+    <el-table v-loading="loading" :data="availableLocations" max-height="700" @row-click="handleLocationClick">
       <el-table-column prop="name" label="Locations"> </el-table-column>
     </el-table>
     <div class="stick-to-bottom">
