@@ -5,7 +5,7 @@
         <locations @on-location-select="handleLocationSelect"/>
       </el-col>
       <el-col :span="18">
-        <div class="grid-content bg-purple-light">content</div>
+        <location-details :details="selectedLocationDetails"/>
       </el-col>
     </el-row>
   </div>

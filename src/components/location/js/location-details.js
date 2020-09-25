@@ -1,3 +1,6 @@
 export default {
-  name: 'location-details'
+  name: 'location-details',
+  props: {
+    details: Object
+  }
 }
