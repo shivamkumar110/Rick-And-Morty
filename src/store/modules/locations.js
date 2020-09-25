@@ -1,11 +1,13 @@
 import locationsApi from '@/api/locations'
 
 const state = {
-  locations: []
+  locations: {}
 }
 
 const getters = {
-  locations: state => state.locations
+  locations: state => state.locations,
+  locationsInfo: state => state.locations.info || {},
+  availableLocations: state => state.locations.results || []
 }
 
 const mutations = {
@@ -17,7 +19,7 @@ const mutations = {
 const actions = {
   async fetchLocations ({ commit }, configs) {
     const response = await locationsApi.fetchLocations(configs)
-    const { data } = response.data
+    const { data } = response
     commit('setLocations', data)
     return response
   }

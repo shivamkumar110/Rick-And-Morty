@@ -3,7 +3,7 @@
 
     </div>
 </template>
-<script src="./js/location.js"></script>
+<script src="./js/location-details.js"></script>
 <style lang="scss" scoped>
 
 </style>

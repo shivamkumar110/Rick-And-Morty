@@ -1,15 +1,20 @@
-import { mapActions } from 'vuex'
 import Locations from '@/components/location/Locations'
+import LocationDetails from '@/components/location/LocationDetails'
 
 export default {
   name: 'home',
   components: {
-    Locations
+    Locations,
+    LocationDetails
   },
-  created () {
-    this.fetchLocations()
+  data () {
+    return {
+      selectedLocationDetails: null
+    }
   },
   methods: {
-    ...mapActions('locations', ['fetchLocations'])
+    handleLocationSelect (details) {
+      this.selectedLocationDetails = details
+    }
   }
 }
