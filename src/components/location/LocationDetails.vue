@@ -20,13 +20,15 @@
               v-for="character in charactersList"
               :key="character.id"
             >
-              <el-card>
-                <img :src="character.image" class="image" />
+              <div @click="goToCharacter(character.id)">
+                <el-card>
+                <img :src="character.image" alt="character image" />
                 <div>
                     Name: {{character.name}}
                     <el-tag :type="character.status === 'Alive'? 'success': 'danger'">{{character.status}}</el-tag>
                 </div>
               </el-card>
+              </div>
             </el-col>
           </el-row>
         </div>

@@ -29,6 +29,9 @@ export default {
         }).finally(() => {
           this.isCharactersLoading = false
         })
+    },
+    goToCharacter (id) {
+      this.$router.push({ name: 'CharacterDetails', params: { id } })
     }
   },
   watch: {
