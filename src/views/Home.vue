@@ -1,10 +1,10 @@
 <template>
   <div>
     <el-row>
-      <el-col :span="6">
+      <el-col :span="6" class="fixed">
         <locations @on-location-select="handleLocationSelect"/>
       </el-col>
-      <el-col :span="18">
+      <el-col :span="18"  :offset="6">
         <location-details :details="selectedLocationDetails"/>
       </el-col>
     </el-row>
